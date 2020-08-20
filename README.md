@@ -3,17 +3,24 @@
 * 记录维护自己的技术栈，便于后期的持续学习和查阅
 * 项目以xmind为核心，其他信息为扩展补充xmind内容
 
-# 目录规范
+# 目录结构
 
 ```shell 
 .
+├── Algorithm
+│   ├── bin_search
+│   ├── bin_tree
+│   ├── breadth_first_search
+│   ├── deep_first_search
+│   ├── design
+│   └── hash_table
 ├── Go
-│   ├── Go.xmind
 │   ├── img
 │   ├── markdown
 │   └── otherDocs
-├── README.md
 ├── docker
+│   └── img
+└── git
 ```
 
 
