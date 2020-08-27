@@ -84,5 +84,5 @@ func connect(root *Node) *Node {
 
 // 思路2 不使用额外空间
 func connect2(root *Node) *Node {
-	
+
 }
