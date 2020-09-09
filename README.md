@@ -1,7 +1,7 @@
 # 简介
 
-* 记录维护自己的技术栈，便于后期的持续学习和查阅
-* 项目以xmind为核心，其他信息为扩展补充xmind内容
+* 系统学习，并留下可复习的资料
+* 包含内容：自己的笔记，资料来源
 
 # 目录结构
 
@@ -13,24 +13,35 @@
 │   ├── breadth_first_search
 │   ├── deep_first_search
 │   ├── design
-│   └── hash_table
+│   ├── dynamic_programming
+│   ├── hash_table
+│   ├── linked_list
+│   ├── scripts
+│   │   ├── lib
+│   │   └── xidel
+│   └── sort
+│       ├── bubble_sort
+│       └── insert_sort
 ├── Go
 │   ├── img
 │   ├── markdown
 │   └── otherDocs
+├── cros
+├── design_pattern
 ├── docker
+│   ├── dockerfile
 │   └── img
-└── git
+├── git
+├── micro_service
+└── rust
 ```
 
 
 
 # 当前项目
 
-- Go - 目前是官网的 language specification的笔记
-- docker 目前是我的第一本docker书笔记
-- git 目前是git权威指南笔记
-- Algorithm leetcode 刷题记录m，以及题解
+- [x] rust
+- [x] design_pattern
 
 # 优秀第三方资源
 
