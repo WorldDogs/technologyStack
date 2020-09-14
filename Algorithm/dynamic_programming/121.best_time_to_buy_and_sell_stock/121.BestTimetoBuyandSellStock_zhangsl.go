@@ -2,7 +2,10 @@
 // Author : zhangsl
 // Date   : 2020-09-08
 package main
-/***************************************************************************************************** 
+
+import "math"
+
+/*****************************************************************************************************
  *
  * Say you have an array for which the ith element is the price of a given stock on day i.
  * 
@@ -26,13 +29,7 @@ package main
  * 
  ******************************************************************************************************/
 // 动态规划三步骤
-// 确定 dp[i]含义:
-// dp[i] 表示第i天卖出,最大的盈利.
-// dp[i] = p[i] - minVal; minVal是0-i-1的最小值.
-// 确定状态转移方程:
-// dp[i-1] = p[i-1]-minVal;
-// => dp[i] = p[i] +dp[i-1]-p[i-1]
-//	dp[i][j] 代表第i天买入,j天卖出,dp[i][j]代表利润
+// 此理解有误。
 
 // 确定初始条件
 // dp[0] = 0
@@ -56,6 +53,27 @@ func maxProfit(prices []int) int {
 		}
 		if dp[i]>ans{
 			ans = dp[i]
+		}
+	}
+	return ans
+}
+
+
+// 换一种思路来思考
+// 最终要求最大的利润，需要找到最低点买进，然后在最高点卖出。可以在遍历的时候记录历史最低值，然后和当前值进行比较，更细结果。
+
+//time: 97 mem:100
+func maxProfit2(prices []int) int {
+	if len(prices)<1{
+		return 0
+	}
+	minVal:=math.MaxInt32
+	ans:=0 //利润最小为0，可以当天买进再卖出
+	for _,v:=range prices{
+		if minVal>v{
+			minVal = v
+		}else if v - minVal>ans{
+			ans = v-minVal
 		}
 	}
 	return ans
