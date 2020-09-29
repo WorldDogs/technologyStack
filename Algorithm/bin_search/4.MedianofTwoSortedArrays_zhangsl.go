@@ -120,7 +120,11 @@ func findMedianSortedArrays2(nums1 []int, nums2 []int) float64{
 	 return float64(ans)/2.0
 }
 // todo wait to complete @zhangshilin
-// 解法3 ：二分
+// 二分法
+// 思路：
+// 将寻找中位数的思路转换为寻找第K小的数字，有些特殊的地方是:第K小是在两个有序数组之上，这样需要两个游标分别指向两个数组，每次必然会抛弃
+// 另一个数组游标以及之前的那一段。
+//
 func main() {
 	arr := []int{1, 2, 3}
 	arr1 := []int{4, 5, 6}
