@@ -135,13 +135,13 @@ if [ ! -s $source_file ]; then
     echo "" > $source_file
 fi
 
-
 #adding the Copyright Comments
 if  ! grep -Fq  "${COMMENT_TAG} Author :" $source_file ; then
     sed -i.bak '1i\'$'\n'"${COMMENT_TAG} Source : ${leetcode_url}"$'\n' $source_file
     sed -i.bak '2i\'$'\n'"${COMMENT_TAG} Author : ${AUTHOR}"$'\n' $source_file
     sed -i.bak '3i\'$'\n'"${COMMENT_TAG} Date   : ${current_time}"$'\n' $source_file
-    sed -i.bak '4i\'$'\n'""$'\n' $source_file
+    sed -i.bak '4i\'$'\n'"package main"$'\n' $source_file
+    sed -i.bak '5i\'$'\n'""$'\n' $source_file
     rm ${source_file}.bak
 fi
 
