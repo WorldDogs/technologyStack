@@ -49,9 +49,9 @@
 
 
 # 当前项目
-
-- [x] rust
 - [x] design_pattern
+    - [] DI 依赖注入
+    - [] IOC 控制反转
 
 # 优秀第三方资源
 
