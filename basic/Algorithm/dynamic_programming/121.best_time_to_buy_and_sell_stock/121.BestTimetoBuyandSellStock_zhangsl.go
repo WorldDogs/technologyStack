@@ -78,3 +78,18 @@ func maxProfit2(prices []int) int {
 	}
 	return ans
 }
+func maxProfit3(prices []int) int {
+	if len(prices) <1{
+		return 0
+	}
+	minVal:=prices[0]
+	ans:=0
+	for _,v:=range prices{
+		if minVal>v{
+			minVal = v
+		}else if v-minVal>ans{
+			ans = v-minVal
+		}
+	}
+	return ans
+}
